@@ -50,14 +50,11 @@ body
     border-radius: 25px;
 }
 
-div {
-    padding: 12px;
-    border: black solid 2px;
-    border-radius: 25px;
-    margin-bottom: 12px;
-    border-color: var(--wits_blue);
-    max-width: 75%;
-    max-height: 25%;
+.infoBlock, .trackersContainer {
+    padding: 10px;
+    border: 2px solid var(--wits_blue);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15); 
 }
 
 .infoBlock{
@@ -66,10 +63,8 @@ div {
     justify-content: center;
 }
 
-div .role
-{
-    border:none;
-}
+
+
 
 .acglName {
     grid-area: title;
@@ -78,7 +73,7 @@ div .role
 .mainHero {
     grid-area: hero;
     width: 90%;
-    border: black 2px das;
+    border: black 2px dashed;
     border-radius: 12px;
 }
 
@@ -95,11 +90,38 @@ div .role
 }
 
 .roleContainer {
-    grid-area: roles;   
+    grid-area: roles;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.roleLabel {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Individual role entries */
+.roleItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+div .role
+{
+    border:none;
+}
+
+
+.roleIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .trackersContainer {
@@ -107,4 +129,9 @@ div .role
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.infoBlock:hover
+{
+    background-color: rgba(255, 255, 255,0.5 );
 }

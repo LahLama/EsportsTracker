@@ -59,7 +59,7 @@ function createPlayerCard(hero) {
   const roles = ["Vanguard", "Duelist", "Strategist"];
   const roleLines = roles
     .filter(role => hero[role])
-    .map(role => `<p>${role}: ${hero[role]}</p>`)
+    .map(role => `<p class="infoBlock">${role} <img src="./RivalsImages/${role.toLowerCase()}.webp" class="roleIcon" alt="${hero[role]}">: ${hero[role]}</p>`)
     .join("");
 
 const heroName = hero["Favourite Rivals Hero"]?.trim();
@@ -72,7 +72,7 @@ card.innerHTML = `
     class="mainHero" 
     src="${heroImage}" 
     alt="${hero["Favourite Rivals Hero"]}"
-    onerror="this.onerror=null; this.src='none.webp';"
+    onerror="this.onerror=null; this.src='none.';"
   >
   <div class="name infoBlock">Name: ${hero["Name"]}</div>
   <div class="rivalsName infoBlock">Marvel Rivals Name: ${hero["Marvel Rivals"]}</div>
