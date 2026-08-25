@@ -1,8 +1,5 @@
- // ---- CONFIGURE THESE ----
   const SHEET_ID = "1Pqv2EXrmbCi_4Ysj2cY0oPlXHe7qMkAnY5M4t-XVAAI";
   const SHEET_NAME = "Manual"; // the tab name, not the whole doc name
-  // Optional: SQL-like query, e.g. "SELECT A, B WHERE C > 100 ORDER BY A"
-  const QUERY = "";
   let rows = [];
   let cols = []
   // --------------------------
