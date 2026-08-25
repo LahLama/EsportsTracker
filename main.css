@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'RivalsFont';
+    src: url('./RivalsFont.ttf') format('truetype');
+    
+}
+
+:root
+{
+    --wits_yellow : #FFB81C;
+    --wits_blue : #002D72;
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+     font-family: 'RivalsFont', sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+body
+{
+    background: var(--wits_blue);
+}
+
+#cards-container
+{
+        margin-left: auto;
+    margin-right: auto;
+   
+}
+.player-card {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title      title"
+        "name       hero"
+        "rivals     hero"
+        "level      hero"
+        "roles      roles"
+        "trackers   trackers";
+
+    gap: 12px;
+    background: var(--wits_yellow);
+
+    width: 75%;
+    margin: 20px auto;
+    padding: 12px;
+    border: 2px solid var(--wits_blue);
+    border-radius: 25px;
+}
+
+div {
+    padding: 12px;
+    border: black solid 2px;
+    border-radius: 25px;
+    margin-bottom: 12px;
+    border-color: var(--wits_blue);
+    max-width: 75%;
+    max-height: 25%;
+}
+
+.infoBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div .role
+{
+    border:none;
+}
+
+.acglName {
+    grid-area: title;
+}
+
+.mainHero {
+    grid-area: hero;
+    width: 90%;
+    border: black 2px das;
+    border-radius: 12px;
+}
+
+.name {
+    grid-area: name;
+}
+
+.rivalsName {
+    grid-area: rivals;
+}
+
+.level {
+    grid-area: level;
+}
+
+.roleContainer {
+    grid-area: roles;   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.trackersContainer {
+    grid-area: trackers;   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
