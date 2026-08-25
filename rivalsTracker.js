@@ -81,9 +81,9 @@ card.innerHTML = `
     ${roleLines}
   </div>
   <div class="trackersContainer">Trackers:
-    <br><a href="${hero["Tracker.GG"]}">Tracker.gg</a>
-    <br><a href="${hero["Rivals Meta"]}">Rivals Meta</a>
-    <br><a href="${hero["Rivals Data"]}">Rivals Data</a>
+    <br><a href="${hero["Tracker.GG"]}" target="_blank">Tracker.gg</a>
+    <br><a href="${hero["Rivals Meta"]}" target="_blank">Rivals Meta</a>
+    <br><a href="${hero["Rivals Data"]}" target="_blank">Rivals Data</a>
   </div>
 `;
 
