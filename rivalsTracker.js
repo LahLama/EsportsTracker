@@ -63,7 +63,7 @@ function createPlayerCard(hero) {
     .join("");
 
 const heroName = hero["Favourite Rivals Hero"]?.trim();
-const heroImage = heroName ? "./RivalsImages/" + heroName.toLowerCase() + ".png" : "./RivalsImages/none.png";
+const heroImage = heroName ? "./RivalsImages/" + heroName.toLowerCase() + ".webp" : "./RivalsImages/none.webp";
 
 
 card.innerHTML = `
@@ -72,7 +72,7 @@ card.innerHTML = `
     class="mainHero" 
     src="${heroImage}" 
     alt="${hero["Favourite Rivals Hero"]}"
-    onerror="this.onerror=null; this.src='none.png';"
+    onerror="this.onerror=null; this.src='none.webp';"
   >
   <div class="name infoBlock">Name: ${hero["Name"]}</div>
   <div class="rivalsName infoBlock">Marvel Rivals Name: ${hero["Marvel Rivals"]}</div>
