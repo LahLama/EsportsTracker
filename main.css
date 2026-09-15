@@ -225,8 +225,5 @@ div .role
         width: 50px;
     }
  
-    .infoBlock, .trackersContainer {
-        padding: 8px;
-        border-radius: 14px;
-    }
+
 }
