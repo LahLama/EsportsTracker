@@ -92,7 +92,9 @@ card.innerHTML = `
   <div class="rivalsName infoBlock">Marvel Rivals Name: ${hero["Marvel Rivals"]}</div>
   <div class="level infoBlock">Level: ${hero["Level"]}</div>
   <div class="roleContainer infoBlock">Preferred Role:
+
     ${roleLines}
+ 
   </div>
   <div class="rankContainer infoBlock">Current Rank:
     <img src="./RivalsImages/ranks/${rank.toLowerCase()}.webp" class="rankIcon" alt="${rank}">

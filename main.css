@@ -17,14 +17,24 @@ h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
 
+#headerText
+{
+    color: var(--wits_yellow);
+}
+
 body
 {
     background: var(--wits_blue);
 }
 
+footer
+{
+    color : aliceblue;
+}
+
 #cards-container
 {
-    margin-left: 2%;
+    /* margin-left: 2%; */
     margin-right: 2%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -102,12 +112,11 @@ body
 
 .roleContainer {
     grid-area: roles;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     align-items: center;
-    justify-content: flex-start;
     gap: 12px;
 }
+
 .rankContainer {
     grid-area: rank;
     display: flex; /* fix: gap needs a flex/grid context to work */
