@@ -62,6 +62,20 @@ function createPlayerCard(hero) {
     .map(role => `<p class="infoBlock">${role} <img src="./RivalsImages/${role.toLowerCase()}.webp" class="roleIcon" alt="${hero[role]}">: ${hero[role]}</p>`)
     .join("");
 
+    
+  const ranks = ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Master", "Grandmaster","OneAboveAll"];
+  // rank, removing anything after a space.
+  const rank = hero["Current Rank"].split(" ")[0].trim();
+  console.log(`Checking rank: ${rank}`);
+
+  if (ranks.includes(rank)) {
+    console.log(`Rank ${rank} is valid.`);
+  }
+  else
+  {
+    console.log('not rank')
+  }
+
 const heroName = hero["Favourite Rivals Hero"]?.trim();
 const heroImage = heroName ? "./RivalsImages/" + heroName.toLowerCase() + ".webp" : "./RivalsImages/none.webp";
 
@@ -80,10 +94,15 @@ card.innerHTML = `
   <div class="roleContainer infoBlock">Preferred Role:
     ${roleLines}
   </div>
+  <div class="rankContainer infoBlock">Current Rank:
+    <img src="./RivalsImages/ranks/${rank.toLowerCase()}.webp" class="rankIcon" alt="${rank}">
+    ${rank}
+  </div>
   <div class="trackersContainer">Trackers:
     <br><a href="${hero["Tracker.GG"]}" target="_blank">Tracker.gg</a>
     <br><a href="${hero["Rivals Meta"]}" target="_blank">Rivals Meta</a>
     <br><a href="${hero["Rivals Data"]}" target="_blank">Rivals Data</a>
+    
   </div>
 `;
 

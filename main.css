@@ -24,30 +24,37 @@ body
 
 #cards-container
 {
-        margin-left: auto;
-    margin-right: auto;
-   
+    margin-left: 2%;
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding-block: 20px;
+
 }
+
+
+
 .player-card {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "title      title"
         "name       hero"
         "rivals     hero"
-        "level      hero"
+        "level      rank"
         "roles      roles"
         "trackers   trackers";
-
+ 
     gap: 12px;
     background: var(--wits_yellow);
-
-    width: 75%;
-    margin: 20px auto;
+ 
+    width: 100%;
+    margin: 0 auto;
     padding: 12px;
     border: 2px solid var(--wits_blue);
     border-radius: 25px;
+
 }
 
 .infoBlock, .trackersContainer {
@@ -58,9 +65,10 @@ body
 }
 
 .infoBlock{
-    display: flex;
+        display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -72,11 +80,11 @@ body
 
 .mainHero {
     grid-area: hero;
-    min-width: 45%;
-    max-width: 90%;
-    min-height: auto;
+    width: 100%;
+    height: auto;
     border: black 2px dashed;
     border-radius: 12px;
+
 }
 
 .name {
@@ -98,6 +106,14 @@ body
     align-items: center;
     justify-content: flex-start;
     gap: 12px;
+}
+.rankContainer {
+    grid-area: rank;
+    display: flex; /* fix: gap needs a flex/grid context to work */
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
 }
 
 .roleLabel {
@@ -127,13 +143,80 @@ div .role
 }
 
 .trackersContainer {
-    grid-area: trackers;   
+    grid-area: trackers;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px;
+
 }
 
 .infoBlock:hover
 {
     background-color: rgba(255, 255, 255,0.5 );
+}
+
+.rankIcon
+{
+    height: 75px;
+    width: 75px;
+    max-width: 100%;
+
+}
+
+
+/* ===== Tablet ===== */
+@media (max-width: 768px) {
+    #cards-container {
+        margin-left: 4%;
+        margin-right: 4%;
+        gap: 20px;
+    }
+ 
+    .rankIcon {
+        height: 60px;
+        width: 60px;
+    }
+}
+ 
+/* ===== Phones ===== */
+@media (max-width: 480px) {
+    #cards-container {
+        grid-template-columns: 1fr; /* single column on phones */
+        margin-left: 3%;
+        margin-right: 3%;
+        gap: 16px;
+    }
+ 
+    .player-card {
+        grid-template-columns: 1fr; /* stack everything vertically */
+        grid-template-areas:
+            "title"
+            "hero"
+            "name"
+            "rivals"
+            "level"
+            "rank"
+            "roles"
+            "trackers";
+        padding: 10px;
+        border-radius: 16px;
+        gap: 10px;
+    }
+ 
+    .mainHero {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+ 
+    .rankIcon {
+        height: 50px;
+        width: 50px;
+    }
+ 
+    .infoBlock, .trackersContainer {
+        padding: 8px;
+        border-radius: 14px;
+    }
 }
