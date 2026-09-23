@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'RivalsFont';
-    src: url('./RivalsFont.ttf') format('truetype');
-    
-}
-
 :root
 {
     --wits_yellow : #FFB81C;
@@ -11,11 +5,7 @@
     
 }
 
-h1,h2,h3,h4,h5,h6{
-     font-family: 'RivalsFont', sans-serif;
-    font-size: 50px;
-    font-weight: normal;
-}
+
 
 .headerText
 {
@@ -45,27 +35,6 @@ footer
 
 
 
-.player-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "title      title"
-        "name       hero"
-        "rivals     hero"
-        "level      rank"
-        "roles      roles"
-        "trackers   trackers";
- 
-    gap: 12px;
-    background: var(--wits_yellow);
- 
-    width: 100%;
-    margin: 0 auto;
-    padding: 12px;
-    border: 2px solid var(--wits_blue);
-    border-radius: 25px;
-
-}
 
 .infoBlock, .trackersContainer {
     padding: 10px;
@@ -82,7 +51,15 @@ footer
     text-align: center;
 }
 
-
+.gamesProfile
+{
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding-block: 20px;
+    background-color: var(--wits_yellow);
+}
 
 
 .acglName {
@@ -102,7 +79,7 @@ footer
     grid-area: name;
 }
 
-.rivalsName {
+.GameName {
     grid-area: rivals;
 }
 
