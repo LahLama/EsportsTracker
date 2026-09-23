@@ -53,14 +53,25 @@ footer
 
 .gamesProfile
 {
-    margin-right: 2%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 35px;
     padding-block: 20px;
     background-color: var(--wits_yellow);
+    min-height: 300px;
 }
 
+.GameTitle 
+{
+      
+      text-decoration: none;
+      color: black;
+}
+
+.gameLogo{
+    width: 256px;
+    height: auto;
+    display: inline;
+}
 
 .acglName {
     grid-area: title;
