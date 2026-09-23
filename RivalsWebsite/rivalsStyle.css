@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'RivalsFont';
+    src: url('./RivalsFont.ttf') format('truetype');
+    
+}
+
+:root
+{
+    --wits_yellow : #FFB81C;
+    --wits_blue : #002D72;
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+     font-family: 'RivalsFont', sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.player-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title      title"
+        "name       hero"
+        "rivals     hero"
+        "level      rank"
+        "roles      roles"
+        "trackers   trackers";
+ 
+    gap: 12px;
+    background: var(--wits_yellow);
+ 
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
+    border: 2px solid var(--wits_blue);
+    border-radius: 25px;
+
+}
+
+
+
+/* ===== Tablet ===== */
+@media (max-width: 768px) {
+    #cards-container {
+        /* margin-left: 4%; */
+        margin-right: 4%;
+        gap: 20px;
+    }
+ 
+    .rankIcon {
+        height: 60px;
+        width: 60px;
+    }
+}
+ 
+/* ===== Phones ===== */
+@media (max-width: 480px) {
+    #cards-container {
+        grid-template-columns: 1fr; /* single column on phones */
+        /* margin-left: 3%; */
+        margin-right: 3%;
+        gap: 16px;
+    }
+ 
+    .player-card {
+        grid-template-columns: 1fr; /* stack everything vertically */
+        grid-template-areas:
+            "title"
+            "hero"
+            "name"
+            "rivals"
+            "level"
+            "rank"
+            "roles"
+            "trackers";
+        padding: 10px;
+        border-radius: 16px;
+        gap: 10px;
+    }
+ 
+    .mainHero {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+ 
+    .rankIcon {
+        height: 50px;
+        width: 50px;
+    }
+ 
+
+}
