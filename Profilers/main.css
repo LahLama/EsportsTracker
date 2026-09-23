@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
 
-#headerText
+.headerText
 {
     color: var(--wits_yellow);
 }
@@ -179,7 +179,7 @@ div .role
 /* ===== Tablet ===== */
 @media (max-width: 768px) {
     #cards-container {
-        margin-left: 4%;
+        /* margin-left: 4%; */
         margin-right: 4%;
         gap: 20px;
     }
@@ -194,7 +194,7 @@ div .role
 @media (max-width: 480px) {
     #cards-container {
         grid-template-columns: 1fr; /* single column on phones */
-        margin-left: 3%;
+        /* margin-left: 3%; */
         margin-right: 3%;
         gap: 16px;
     }
