@@ -186,7 +186,14 @@ div .role
         margin-right: 3%;
         gap: 16px;
     }
- 
+ .gamesProfile {
+    min-height: 220px;   /* 300px is a lot of scrolling on a phone */
+    gap: 16px;
+}
+
+.gameTitle {
+    font-size: 1.25rem;
+}
     .player-card {
         grid-template-columns: 1fr; /* stack everything vertically */
         grid-template-areas:
