@@ -98,7 +98,7 @@ card.innerHTML = `
   </div>
   <div class="rankContainer infoBlock">Peak Rank:
     <img src="./RivalsImages/ranks/${rank.toLowerCase()}.webp" class="rankIcon" alt="${rank}">
-    ${rank}
+    <em>${rank}</em>
   </div>
   <div class="trackersContainer">Trackers:
     <br><a href="${hero["Tracker.GG"]}" target="_blank">Tracker.gg</a>

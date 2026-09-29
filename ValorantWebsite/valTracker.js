@@ -64,7 +64,7 @@ function createPlayerCard(hero) {
     .map(role => `<p class="infoBlock">${role} <img src="./ValImages/roles/${role.toLowerCase()}.webp" class="roleIcon" alt="${hero[role]}">: ${hero[role]}</p>`)
     .join("");
 
-  const ranks = ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Ascendant", "Immortal", "Radiant"];
+  const ranks = ["Bronze", "Silver","Iron", "Gold", "Platinum", "Diamond", "Ascendant", "Immortal", "Radiant"];
 
   const rawRank = hero["Peak Rank"] || "";
   const rankTier = parseRankTier(rawRank);
@@ -82,14 +82,14 @@ function createPlayerCard(hero) {
   const heroImage = heroName ? "./ValImages/" + heroName.toLowerCase() + ".webp" : "./ValImages/none.webp";
 
   card.innerHTML = `
-  <h2 class="acglName">${hero["ACGL"]}</h2>
+  <h2 class="acglName">${hero["Name"]}</h2>
   <img 
     class="mainHero" 
     src="${heroImage}" 
     alt="${hero["Favourite Valorant Agent"]}"
     onerror="this.onerror=null; this.src='none.';"
   >
-  <div class="name infoBlock">Name: ${hero["Name"]}</div>
+  <div class="name infoBlock">ACGL: ${hero["ACGL"]}</div>
   <div class="GameName infoBlock">Valorant Name: ${hero["Valorant"]}</div>
   <div class="level infoBlock">Level: ${hero["Level"]}</div>
   <div class="roleContainer infoBlock">Preferred Role:
@@ -99,7 +99,7 @@ function createPlayerCard(hero) {
   </div>
   <div class="rankContainer infoBlock">Peak Rank:
     <img src="./ValImages/ranks/${rankIconTier}.webp" class="rankIcon" alt="${displayRank}">
-    ${displayRank}
+    <em>${displayRank}</em>
   </div>
   <div class="trackersContainer">Trackers:
     <br><a href="${hero["Tracker.GG"]}" target="_blank">Tracker.gg</a>
