@@ -66,7 +66,7 @@ function createPlayerCard(hero) {
 
   const ranks = ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Ascendant", "Immortal", "Radiant"];
 
-  const rawRank = hero["Current Rank"] || "";
+  const rawRank = hero["Peak Rank"] || "";
   const rankTier = parseRankTier(rawRank);
   const displayRank = rawRank || "Unranked";
 
@@ -97,7 +97,7 @@ function createPlayerCard(hero) {
     ${roleLines}
  
   </div>
-  <div class="rankContainer infoBlock">Current Rank:
+  <div class="rankContainer infoBlock">Peak Rank:
     <img src="./ValImages/ranks/${rankIconTier}.webp" class="rankIcon" alt="${displayRank}">
     ${displayRank}
   </div>

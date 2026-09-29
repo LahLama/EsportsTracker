@@ -65,7 +65,7 @@ function createPlayerCard(hero) {
     
   const ranks = ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Master", "Grandmaster","OneAboveAll"];
   // rank, removing anything after a space.
-  const rank = hero["Current Rank"].split(" ")[0].trim();
+  const rank = hero["Peak Rank"].split(" ")[0].trim();
   console.log(`Checking rank: ${rank}`);
 
   if (ranks.includes(rank)) {
@@ -96,7 +96,7 @@ card.innerHTML = `
     ${roleLines}
  
   </div>
-  <div class="rankContainer infoBlock">Current Rank:
+  <div class="rankContainer infoBlock">Peak Rank:
     <img src="./RivalsImages/ranks/${rank.toLowerCase()}.webp" class="rankIcon" alt="${rank}">
     ${rank}
   </div>
