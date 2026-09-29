@@ -4,7 +4,10 @@
     --wits_blue : #002D72;
     
 }
-
+*
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 
 .headerText
